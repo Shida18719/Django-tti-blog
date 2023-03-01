@@ -108,6 +108,7 @@
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
                 </form>
                 {% endif %}
                 {% endif %}
@@ -115,5 +116,14 @@
         </div>
     </div>
 </div>
+
+<script>
+    setTimeout(function () {
+        let myAlert = document.getElementsByClassName('alert');
+        let nAlert = new bootstrap.Alert(myAlert);
+        alert.close();
+    }, 2500);
+</script>
+
 
 {% endblock content %}
